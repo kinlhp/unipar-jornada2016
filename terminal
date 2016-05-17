@@ -1,0 +1,17 @@
+Copiar arquivo: comando cp 
+	cp <origem> <destino> 
+
+Mover arquivo: comando mv 
+	mv <origem> <destino> 
+
+Remover arquivo: comando rm 
+	rm <caminho> 
+
+Alterar senha: comando passwd 
+	passwd <usuario> 
+
+Logar como super usuário: comando su 
+	su <usuario> 
+
+* Para copiar, mover ou remover recursivamente é preciso passar o argumento -R 
+* Para copiar, mover ou remover de forma verbosa é preciso passar o argumento -v 
