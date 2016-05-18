@@ -1,0 +1,5 @@
+# para executar 'update-alternatives --install', 'update-alternatives --set' e 'update-alternatives --remove', para JDK, de forma automatizada: 
+:~# while read line; do $line; done < update-alternatives--install 
+:~# while read line; do $line; done < update-alternatives--set 
+:~# while read line; do $line; done < update-alternatives--remove 
+

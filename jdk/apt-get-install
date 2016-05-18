@@ -1,0 +1,11 @@
+adicionar repositório não oficial para Oracle JDK 
+	sudo add-apt-repository ppa:webupd8team/java 
+
+atualizar lista de pacotes 
+	sudo apt-get update 
+
+instalar Oracle JDK 
+	sudo apt-get install oracle-java8-installer 
+
+* a instalação via apt-get dispensa as configurações por update-alternatives pois já as faz automaticamente 
+

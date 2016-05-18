@@ -1,17 +1,90 @@
 Copiar arquivo: comando cp 
-	cp <origem> <destino> 
+	cp /caminho/de/origem /caminho/de/destino/ 
+
 
 Mover arquivo: comando mv 
-	mv <origem> <destino> 
+	mv /caminho/de/origem /caminho/de/destino/ 
+
 
 Remover arquivo: comando rm 
-	rm <caminho> 
+	rm /caminho/de/origem 
+
 
 Alterar senha: comando passwd 
-	passwd <usuario> 
+	passwd NOME_DO_USUARIO 
+
 
 Logar como super usuário: comando su 
-	su <usuario> 
+	su NOME_DO_USUARIO 
+
+
+Executar comando como super usuário: comando sudo 
+	sudo <comando a ser executado> 
+
+
+Alterar usuário proprietário de arquivos e pastas: comando chown 
+	chown NOME_DO_USUARIO /caminho/de/origem 
+
+
+Alterar grupo proprietário de arquivos e pastas: comando chgrp 
+	chgrp NOME_DO_GRUPO /caminho/de/origem 
+
+
+Alterar usuário e grupo proprietário de arquivos e pastas: comando chown 
+	chown NOME_DO_USUARIO:NOME_DO_GRUPO /caminho/de/origem 
+
+
+Alterar permissões de aceso para arquivos e pastas: comando chmod 
+	chmod <permissão> /caminho/e/nome/do/arquivo 
+		rwx rwx rwx letter 
+		421 421 421 ordinal 
+		 7   7   7  definition 
+
+	1º par: usuário proprietário 
+	2º par: usuários no grupo proprietário 
+	3º par: demais usuários
+
+
+Criar arquivo vazio: comando touch 
+	touch /caminho/e/nome/do/arquivo 
+
+
+Editar arquivo pelo terminal: comando nano, vi, etc... 
+	nano /caminho/e/nome/do/arquivo 
+		salvar arquivo Ctrl + O 
+		fechar arquivo Ctrl + X 
+
+	vi /caminho/e/nome/do/arquivo 
+		salvar e fechar arquivo ESC -> :wq 
+
+
+Diretório definido para os arquivos fonte: /usr/local/src/ 
+
+
+Diretório definido para os links simbólicos (para futuras instalações): /usr/local/ 
+
+
+JDK: 
+- copiar arquivo fonte para /usr/local/src/ 
+	sudo cp jdk-<versao>.tar.gz /usr/local/src/
+
+- extrair arquivo fonte 
+	cd /usr/local/src/ 
+	sudo tar -zxvf jdk-<versao>.tar.gz 
+
+- criar link simbólico para futuras atualizações 
+	sudo ln -s /usr/local/src/jdk<versao> /usr/local/java 
+
+- definir alternativa para execução dos executáveis a partir de qualquer diretório 
+	sudo update-alternatives --install /usr/bin/java java /usr/local/java/bin/java 1 
+	sudo update-alternatives --install /usr/bin/javac javac /usr/local/java/bin/javac 1 
+
+- compilar arquivo .java para geração do .class (Byte Code arquivo legível pela JVM) 
+	javac /caminho/e/nome/do/Arquivo.java (com extenção .java) 
+
+- executar arquivo .class 
+	java /caminho/e/nome/do/Arquivo (sem extenção .class) 
 
 * Para copiar, mover ou remover recursivamente é preciso passar o argumento -R 
 * Para copiar, mover ou remover de forma verbosa é preciso passar o argumento -v 
+
